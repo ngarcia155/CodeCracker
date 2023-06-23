@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<Pane focusTraversable="true" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="616.0" prefWidth="630.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.codercracker.codecracker.CodeCrackerController">
+   <children>
+      <Text layoutX="193.0" layoutY="67.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Time To Crack" underline="true">
+         <font>
+            <Font size="36.0" />
+         </font>
+      </Text>
+      <TextField fx:id="TimerDisplay" alignment="TOP_CENTER" editable="false" focusTraversable="false" layoutX="218.0" layoutY="76.0" prefHeight="54.0" prefWidth="174.0" promptText="00:00">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </TextField>
+      <GridPane alignment="TOP_RIGHT" layoutX="69.0" layoutY="168.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="125.0" prefWidth="517.0">
+        <columnConstraints>
+          <ColumnConstraints halignment="CENTER" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints maxHeight="25.0" minHeight="10.0" prefHeight="18.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="82.0" minHeight="20.0" prefHeight="82.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="25.0" minHeight="10.0" prefHeight="18.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Button fx:id="up0Button" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#buttonClicked" prefHeight="34.0" prefWidth="37.0" text="^" />
+            <Button fx:id="up1Button" mnemonicParsing="false" onAction="#buttonClicked" prefHeight="34.0" prefWidth="37.0" text="^" GridPane.columnIndex="1" />
+            <Button fx:id="up2Button" mnemonicParsing="false" onAction="#buttonClicked" prefHeight="34.0" prefWidth="37.0" text="^" GridPane.columnIndex="2" />
+            <Button fx:id="up3Button" mnemonicParsing="false" onAction="#buttonClicked" prefHeight="34.0" prefWidth="37.0" text="^" GridPane.columnIndex="3" />
+            <Button fx:id="up4Button" mnemonicParsing="false" onAction="#buttonClicked" prefHeight="34.0" prefWidth="37.0" text="^" GridPane.columnIndex="4" />
+            <Button fx:id="down0Button" mnemonicParsing="false" onAction="#buttonClicked" prefHeight="34.0" prefWidth="37.0" text="v" GridPane.rowIndex="2" />
+            <Button fx:id="down1Button" mnemonicParsing="false" onAction="#buttonClicked" prefHeight="34.0" prefWidth="37.0" text="v" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <Button fx:id="down2Button" mnemonicParsing="false" onAction="#buttonClicked" prefHeight="34.0" prefWidth="37.0" text="v" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+            <Button fx:id="down3Button" mnemonicParsing="false" onAction="#buttonClicked" prefHeight="34.0" prefWidth="37.0" text="v" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+            <Button fx:id="down4Button" mnemonicParsing="false" onAction="#buttonClicked" prefHeight="34.0" prefWidth="37.0" text="v" GridPane.columnIndex="4" GridPane.rowIndex="2" />
+            <Button fx:id="button0" focusTraversable="false" mnemonicParsing="false" onAction="#buttonClicked" pickOnBounds="false" prefHeight="84.0" prefWidth="52.0" text="0" GridPane.rowIndex="1" />
+            <Button fx:id="button1" focusTraversable="false" mnemonicParsing="false" onAction="#buttonClicked" pickOnBounds="false" prefHeight="127.0" prefWidth="52.0" text="0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <Button fx:id="button2" focusTraversable="false" mnemonicParsing="false" onAction="#buttonClicked" pickOnBounds="false" prefHeight="111.0" prefWidth="52.0" text="0" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+            <Button fx:id="button3" focusTraversable="false" mnemonicParsing="false" onAction="#buttonClicked" pickOnBounds="false" prefHeight="81.0" prefWidth="52.0" text="0" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+            <Button fx:id="button4" focusTraversable="false" mnemonicParsing="false" onAction="#buttonClicked" pickOnBounds="false" prefHeight="105.0" prefWidth="52.0" text="0" GridPane.columnIndex="4" GridPane.rowIndex="1" />
+         </children>
+      </GridPane>
+      <Button fx:id="startButton" layoutX="218.0" layoutY="530.0" mnemonicParsing="false" onAction="#buttonClicked" prefHeight="48.0" prefWidth="174.0" text="PUSH TO CRACK" />
+      <Text layoutX="193.0" layoutY="372.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Unlock Options" underline="true">
+         <font>
+            <Font size="36.0" />
+         </font>
+      </Text>
+      <ButtonBar layoutX="77.0" layoutY="416.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="62.0" prefWidth="497.0">
+        <buttons>
+            <RadioButton fx:id="bruteForceRadio" mnemonicParsing="false" onAction="#radioButton" selected="true" text="Brute Force">
+               <padding>
+                  <Insets left="10.0" right="10.0" />
+               </padding>
+               <toggleGroup>
+                  <ToggleGroup fx:id="options" />
+               </toggleGroup>
+            </RadioButton>
+            <RadioButton fx:id="dictRadio" mnemonicParsing="false" onAction="#radioButton" text="Dictionary" toggleGroup="$options">
+               <padding>
+                  <Insets left="10.0" right="10.0" />
+               </padding>
+            </RadioButton>
+            <RadioButton fx:id="hybridRadio" mnemonicParsing="false" onAction="#radioButton" text="Hybrid" toggleGroup="$options">
+               <padding>
+                  <Insets left="10.0" right="10.0" />
+               </padding>
+            </RadioButton>
+            <RadioButton fx:id="patternRadio" mnemonicParsing="false" onAction="#radioButton" text="Patterns" toggleGroup="$options">
+               <padding>
+                  <Insets left="10.0" right="10.0" />
+               </padding>
+            </RadioButton>
+        </buttons>
+         <padding>
+            <Insets left="20.0" />
+         </padding>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+      </ButtonBar>
+   </children>
+</Pane>
