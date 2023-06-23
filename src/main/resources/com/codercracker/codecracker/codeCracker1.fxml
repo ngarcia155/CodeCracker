@@ -20,7 +20,7 @@
             <Font size="36.0" />
          </font>
       </Text>
-      <TextField fx:id="TimerDisplay" alignment="TOP_CENTER" editable="false" focusTraversable="false" layoutX="218.0" layoutY="76.0" prefHeight="54.0" prefWidth="174.0" promptText="00:00">
+      <TextField fx:id="TimerDisplay" alignment="TOP_CENTER" editable="false" focusTraversable="false" layoutX="208.0" layoutY="76.0" prefHeight="54.0" prefWidth="235.0" promptText="00:00">
          <font>
             <Font name="System Bold" size="24.0" />
          </font>

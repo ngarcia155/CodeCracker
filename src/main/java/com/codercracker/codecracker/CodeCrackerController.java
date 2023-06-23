@@ -94,6 +94,7 @@ public class CodeCrackerController {
         buttonHashtable.put("down3Button", down3Button);
         buttonHashtable.put("up4Button", up4Button);
         buttonHashtable.put("down4Button", down4Button);
+        buttonHashtable.put("startButton", startButton);
     }
 
     @FXML
@@ -177,8 +178,10 @@ public class CodeCrackerController {
                     button4.setText(currentVal - 1 +"");
                 }
                 break;
-            default:
-                TimerDisplay.setText(getCodeEntered()+"");
+            case "startButton":
+                //
+                //System.out.println(getSelectedRadioButtonName(options));
+                attack(getSelectedRadioButtonName(options));
                 break;
         }
     }
@@ -225,6 +228,17 @@ public class CodeCrackerController {
             return selectedRadioButton.getId();
         }
         return null;
+    }
+
+    private void attack(String chosenOption){
+        switch (chosenOption){
+            case "bruteForceRadio":
+                BruteForceAttack bruteForceAttack = new BruteForceAttack(Integer.parseInt(getCodeEntered()));
+                TimerDisplay.setText(BruteForceAttack.getTimeTaken());
+                break;
+        }
+
+
     }
 
 
